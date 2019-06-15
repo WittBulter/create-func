@@ -1,13 +1,16 @@
-## func-template
+## create-func
+
+installer for [func](https://github.com/wittbulter/func)
 
 ### Usage
 
-  1. run `npm i` to install deps.
+#### npm version > 6.1.0
   
-  2. run `npm start` set up link.
+  Just run `npm init func`. 
   
-  3. just run your command follow tips.
-  
-### Build
+#### npm version < 6.1.0
 
-  1. run `npm build` to build.
+  run `npx create-func` to install.
+
+### LICENSE
+[MIT](./LICENSE)

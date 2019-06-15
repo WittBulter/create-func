@@ -1,0 +1,39 @@
+{
+	"name": "create-func",
+	"version": "0.1.0",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"preferGlobal": true,
+	"scripts": {
+		"start": "cfunc dev",
+		"lint": "tslint -c tslint.yml -p tsconfig.json",
+		"build": "cfunc build",
+		"release": "yarn build && yarn publish --non-interactive"
+	},
+	"devDependencies": {
+		"@types/node": "^12.0.8",
+		"ansi-escapes": "^4.2.0",
+		"cfunc": "^1.0.0",
+		"chalk": "^2.4.2",
+		"func": "^1.0.4",
+		"git-clone": "^0.1.0",
+		"ncc": "^0.3.6",
+		"ora": "^3.4.0",
+		"prompt-sync": "^4.1.7",
+		"ts-node": "^8.2.0",
+		"tslint": "^5.17.0",
+		"tslint-config-lambdas": "^1.1.0",
+		"typescript": "^3.5.2"
+	},
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/wittbulter/create-func.git"
+	},
+	"bin": {
+		"create-func": "./dist/bin.js"
+	}
+}

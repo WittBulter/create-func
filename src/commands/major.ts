@@ -64,6 +64,7 @@ export class Major {
     delete pkg.author
     delete pkg.bugs
     delete pkg.description
+    delete pkg.bin
     fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2))
   }
   

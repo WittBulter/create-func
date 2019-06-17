@@ -5,17 +5,17 @@
   "license": "MIT",
   "preferGlobal": true,
   "scripts": {
-    "start": "cfunc dev",
+    "start": "func-service dev",
     "lint": "tslint -c tslint.yml -p tsconfig.json",
-    "build": "cfunc build",
+    "build": "func-service build",
     "release": "yarn build && yarn publish --non-interactive"
   },
   "devDependencies": {
     "@types/node": "^12.0.8",
     "ansi-escapes": "^4.2.0",
-    "cfunc": "^1.0.0",
     "chalk": "^2.4.2",
     "func": "^1.0.4",
+    "func-service": "^0.1.1",
     "git-clone": "^0.1.0",
     "ncc": "^0.3.6",
     "ora": "^3.4.0",

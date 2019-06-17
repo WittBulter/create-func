@@ -37,7 +37,7 @@ export class Major {
     spinner.start('template installing...')
     return new Promise((resolve, reject) => {
       require('git-clone')(
-        'https://github.com/WittBulter/func-template/',
+        'https://github.com/awesome-templates/func-template',
         this.projectPath,
         { shallow: true },
         (err) => {

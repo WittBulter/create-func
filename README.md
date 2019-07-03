@@ -1,6 +1,6 @@
 ## create-func
 
-installer for [func](https://github.com/wittbulter/func)
+installer for [func](https://github.com/unix/func)
 
 ### Usage
 

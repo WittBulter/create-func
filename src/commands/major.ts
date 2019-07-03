@@ -53,7 +53,7 @@ export class Major {
   }
   
   async after(): Promise<void> {
-    execSync(`cd ${this.projectPath} && rm -rf .git .circle.yml .travis.yml .github now.json README_CN.md`)
+    execSync(`cd ${this.projectPath} && rm -rf .git .circle.yml .travis.yml .github now.json README_CN.md yarn.lock package-lock.json`)
     const pkgPath = path.join(this.projectPath, 'package.json')
     if (!fs.existsSync(pkgPath)) return
     let pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))

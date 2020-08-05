@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { CommandMajor } from 'func'
 import { execSync } from 'child_process'
+import rimraf from 'rimraf'
 import * as print from '../utils/print'
 import * as spinner from '../utils/spinner'
 
@@ -53,7 +54,10 @@ export class Major {
   }
   
   async after(): Promise<void> {
-    execSync(`cd ${this.projectPath} && rm -rf .git .circle.yml .travis.yml .github now.json README_CN.md yarn.lock package-lock.json`)
+    const files = ['.git', '.circle.yml', '.travis.yml', '.github', 'now.json', 'README_CN.md', 'yarn.lock', 'package-lock.json']
+    for (const file of files) {
+      rimraf.sync(path.join(this.projectPath, file))
+    }
     const pkgPath = path.join(this.projectPath, 'package.json')
     if (!fs.existsSync(pkgPath)) return
     let pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))
